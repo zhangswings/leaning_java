@@ -1,0 +1,25 @@
+package com.java.pdsu;
+
+public class Dyadic_array {
+	public static void main(String[] args) {
+		int[][] aa;
+		//3行4列，默认值为0
+		aa=new int[3][4];
+		for (int[] is : aa) {
+			for (int i : is) {
+				System.out.print(i+"\t");
+			}
+			System.out.println();
+		}
+		System.out.println(aa.length+" 行");
+		System.out.println(aa[0].length+" 列");
+	}
+}
+
+
+//output:
+//0	0	0	0	
+//0	0	0	0	
+//0	0	0	0	
+//3 行
+//4 列
