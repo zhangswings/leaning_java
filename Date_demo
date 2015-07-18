@@ -1,0 +1,44 @@
+package com.java.pdsu.cls;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+
+public class Date_demo {
+	public static void main(String[] args) {
+		// Calendar c=Calendar.getInstance();
+		// System.out.println(c.getFirstDayOfWeek());
+		LocalDate ld = LocalDate.now();
+		System.out.println(ld);
+		int year = ld.getYear();
+		Month month = ld.getMonth();
+
+		int int_month = ld.getMonthValue();
+		int day = ld.getDayOfYear();
+		System.out.println(year);
+		System.out.println(month);
+		System.out.println(day);
+		System.out.println(int_month);
+
+		LocalTime lt = LocalTime.now();
+		System.out.println(lt);
+
+		LocalDateTime ldt = LocalDateTime.now();
+		System.out.println(ldt);
+		String datestr = "2015-07-18 20:49:10";
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime localDateTime=LocalDateTime.parse(datestr,formatter);
+		System.out.println(localDateTime);
+		
+		ZonedDateTime zonedDateTime=ZonedDateTime.now();
+		System.out.println(zonedDateTime);
+		
+		DateTimeFormatter formatter2=DateTimeFormatter.ofPattern("MM/dd/yyyy:HH:mm:ss");
+		String str_date=zonedDateTime.format(formatter2);
+		System.out.println(str_date);
+	}
+}
