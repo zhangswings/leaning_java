@@ -1,0 +1,27 @@
+package com.java.pdsu.cls;
+
+class Persons {
+	String name;
+	int age;
+}
+
+class Student extends Persons {
+	String school;
+
+	@Override
+	public String toString() {
+		return "Student [school=" + school + ", name=" + name + ", age=" + age + "]";
+	}
+
+}
+
+public class Class_extends_demo {
+	public static void main(String[] args) {
+		Student s = new Student();
+		s.name = "zhang";
+		s.age = 12;
+		s.school = "henan";
+		System.out.println(s.toString());
+	}
+
+}
