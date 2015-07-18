@@ -1,0 +1,19 @@
+package com.java.pdsu;
+
+public class Test_lambda_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 new Runnable() {
+			public void run() {
+				System.out.println("匿名内部类runnable");
+			}
+		}.run();
+		//参数，->,{}代码块
+		Runnable r=()->{
+			System.out.println("Lamda实现的接口");
+		};
+		r.run();
+	}
+
+}
