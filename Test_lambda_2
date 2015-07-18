@@ -1,0 +1,23 @@
+package com.java.pdsu;
+
+public class Test_lambda_2 {
+
+	public static void main(String[] args) {
+			new Action() {
+				
+				@Override
+				public void execute(String content) {
+					// TODO Auto-generated method stub
+					System.out.println(content);
+				}
+			}.execute("jdk1.8之前的匿名内部类实现方式,执行");;
+			Action action=(String content)->{
+				System.out.println(content);
+			};
+			action.execute("jdk1.8实现登陆操作");
+	}
+
+	static  interface Action{
+		void execute(String content);
+	}
+}
